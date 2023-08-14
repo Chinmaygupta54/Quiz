@@ -1,0 +1,18 @@
+*{
+    background-color: honeydew;
+}
+form{
+    border: solid;
+    width : 200px;
+    align-content: center;
+    margin : 200px auto;
+    border-radius: 1px;
+    text-align: center;
+    
+}
+form input,
+form select{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
