@@ -1,25 +1,55 @@
 *{
+    margin: 0;
+    padding: 0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 form{
     border: 2px;
     width : 70%;
-    align-content: center;
     margin : 200px auto;
-    border-radius: 5px;
+    border-radius: 100px;
     text-align: center;
     box-shadow: 2px 2px 3px grey;
     padding: 10px 50px;
+    display: block;
     
 }
 form input,
 form select{
-    width: 100%;
+    width: 80%;
     padding: 10px;
     box-sizing: border-box;
+    margin: 5px auto;
+}
+form div{
+    margin: 5px;
+    align-items: center;
+}
+form h2{
+    background-color: midnightblue;
+    color: white;
+    padding: 5px auto;
+    text-align: center;
+    
+
 }
 form input[type=submit]{
-    width: 70%;
+    width: 20%;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 20px;
+    display: block;
+    font-size: 1.1rem;
+    justify-content: center;
+    background-color: lightpink ;
+    color: white;
+}
+form select.option{
+    width: 50%;
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+span{
+    color: brown;
+    margin: 5px;
 }
