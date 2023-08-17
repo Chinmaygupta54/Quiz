@@ -1,13 +1,15 @@
 *{
-    background-color: honeydew;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 form{
-    border: solid;
-    width : 200px;
+    border: 2px;
+    width : 70%;
     align-content: center;
     margin : 200px auto;
-    border-radius: 1px;
+    border-radius: 5px;
     text-align: center;
+    box-shadow: 2px 2px 3px grey;
+    padding: 10px 50px;
     
 }
 form input,
@@ -15,4 +17,9 @@ form select{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+}
+form input[type=submit]{
+    width: 70%;
+    margin: auto;
+    border-radius: 5px;
 }

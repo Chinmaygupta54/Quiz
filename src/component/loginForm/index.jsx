@@ -24,7 +24,6 @@ export const LoginForm = () => {
         id = 'userSubmitButton'
         value = "Registration" 
         onClick={LoginForm}/>
-        <input type="button" value="SignIn" />
     </form>
    
   )
