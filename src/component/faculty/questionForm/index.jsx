@@ -22,6 +22,7 @@ const QustionForm = ({addQuestion}) => {
             optionC : optionC,
             optionD : optionD
         })
+        navigate("/questionForm")
     }
 
   return (
@@ -29,7 +30,7 @@ const QustionForm = ({addQuestion}) => {
             <form action = "">
               <h1>Add Questions</h1>
                 <input
-                    type = "textarea"
+                    type='textarea'
                     placeholder = "Enter Question"
                     value = {question}
                     onChange = {(e) => setQuestion(e.target.value)} 
@@ -59,14 +60,14 @@ const QustionForm = ({addQuestion}) => {
                     onChange = {(e) => setOptionD(e.target.value)} 
                 />
                 <select id="vehicleType" name="type" required>
-			        <option value="select Correct Option" disabled selected>--Select option--</option>
+			        <option value disabled >--Select correct option--</option>
 			        <option value="optionA">option A</option>
 			        <option value="optionB">option B</option>
 			        <option value="optionC">option C</option>
                     <option value="optionD">option D</option>
 		        </select>
                 <input
-                    type = "submit"
+                    type = "button"
                     value = "Add Question"
                     onClick = {add} 
                     

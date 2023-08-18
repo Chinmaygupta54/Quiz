@@ -3,25 +3,30 @@ import React from 'react'
 const SignIn  = () => {
   return (
     <div>
-        <form action="">
+      <form action="">
         <h2>Sign In</h2>
-        <input type = "text"
-        name = "userName"
-        id = "username"
-        placeholder = 'Username'
-       />
         <input
-        type="password"
-        name = "Password"
-        id = "password"
-        placeholder = 'Password'
+            type = "text"
+            name = "userName"
+            id = "username"
+            placeholder = 'Username'
         />
-        <input type="password" 
-        placeholder='Confirm Password' />
+        <input
+            type="password"
+            name = "Password"
+            id = "password"
+            placeholder = 'Password'
+        />
+        <input
+            type="password" 
+            placeholder='Confirm Password'
+        />
       
-        <input type="button" value="SignIn" />
-        </form>
-      
+        <input
+            type="button"
+            value="SignIn"
+        />
+      </form>
     </div>
   )
 }
