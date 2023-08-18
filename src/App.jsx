@@ -1,11 +1,10 @@
 import { BrowserRouter, Route, Routes} from "react-router-dom"
 import Footer from "./component/footer"
 import Header from "./component/header"
-
-
-
-
 import LoginForm from "./component/loginForm"
+import QustionForm from "./component/faculty/questionForm"
+import { useState } from "react"
+import QuestionList from "./component/faculty/qustionList"
 
 export const App = () => {
 
@@ -25,7 +24,7 @@ export const App = () => {
             <Route path="/questionForm" element = {<QustionForm addQuestion = {addQuestion}/>} />
           </Routes>
           <Footer />
-          <LoginForm />    
+          
         </BrowserRouter>
     )
 }
