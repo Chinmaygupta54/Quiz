@@ -22,6 +22,7 @@ const QustionForm = ({addQuestion}) => {
             optionC : optionC,
             optionD : optionD
         })
+        navigate("/questionForm")
     }
 
   return (
@@ -29,7 +30,7 @@ const QustionForm = ({addQuestion}) => {
             <form action = "">
               <h1>Add Questions</h1>
                 <input
-                    type = "textarea"
+                    type='textarea'
                     placeholder = "Enter Question"
                     value = {question}
                     onChange = {(e) => setQuestion(e.target.value)} 
@@ -66,7 +67,7 @@ const QustionForm = ({addQuestion}) => {
                     <option value="optionD">option D</option>
 		        </select>
                 <input
-                    type = "submit"
+                    type = "button"
                     value = "Add Question"
                     onClick = {add} 
                     
