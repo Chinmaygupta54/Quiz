@@ -5,7 +5,6 @@ import Wrapper from './style'
 const Header = () => {
   return (
    <header>
-    {/*nav tag */}
     <Wrapper>
         <h1>Quiz App</h1>
         <ul>
