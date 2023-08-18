@@ -1,7 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 import "./style.css"
 
 export const LoginForm = () => {
+  
+  const navigate = useNavigate()
+  const signIn = () => {
+    navigate("/signin")
+}
   return (
       <form action = "">
         <h2>Login</h2>
@@ -25,7 +31,7 @@ export const LoginForm = () => {
             onClick={LoginForm}
         />
         <p>
-          Are you a new user?<span>SignIn </span>
+          Are you a new user?<span onClick={signIn}>SignIn </span>
         </p>
       </form>
    )

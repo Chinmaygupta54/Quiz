@@ -12,6 +12,7 @@ form{
     box-shadow: 2px 2px 3px grey;
     padding: 10px 50px;
     display: block;
+    box-sizing: content-box;
     
 }
 form input,
