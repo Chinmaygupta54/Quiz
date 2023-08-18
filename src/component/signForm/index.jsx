@@ -17,10 +17,10 @@ const SignIn  = () => {
             id = "password"
             placeholder = 'Password'
         />
-        <input>
+        <input
             type="password" 
             placeholder='Confirm Password'
-        </input>
+        />
       
         <input
             type="button"
