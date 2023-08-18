@@ -4,15 +4,17 @@ import "./style.css"
 export const LoginForm = () => {
   return (
         <form action = "">
-          <h3>Login</h3>
-        <input type = "text"
-        name = "userName"
-        id = "username"
+          <h2>Login</h2>
+          {/* <div> */}
+          {/* <label>UserName:</label></div> */}
+        <input type = "text" 
         placeholder = 'Username'
         />
+        {/* <div> */}
+       {/* <label>Password:</label> */}
+       {/* </div> */}
         <input
-        name = "Password"
-        id = "password"
+       type='password'
         placeholder = 'Password'
      />
         <select name = "" id="">
@@ -22,8 +24,13 @@ export const LoginForm = () => {
         </select>
         <input type = "submit"
         id = 'userSubmitButton'
-        value = "Registration" 
+        value = "Login" 
         onClick={LoginForm}/>
+        <p>Are you a new user?
+          <span>SignIn </span>
+          </p>
+       
+
     </form>
    
   )

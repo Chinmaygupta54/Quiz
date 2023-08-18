@@ -26,6 +26,7 @@ export const App = () => {
             <Route path = "/attempt-quiz" element {...<Quiz />} />
           </Routes>
           <Footer />
+          
         </BrowserRouter>
     )
 }
