@@ -31,7 +31,7 @@ export const LoginForm = () => {
             onClick={LoginForm}
         />
         <p>
-          Are you a new user?<span onClick={signIn}>SignIn </span>
+          Are you a new user?<span onClick={signIn}>SignIn</span>
         </p>
       </form>
    )

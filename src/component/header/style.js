@@ -1,5 +1,4 @@
-import { styled } from "styled-components"
-
+ import { styled } from "styled-components"
 const Wrapper = styled.nav`
     width: 80%;
     margin: auto;

@@ -47,11 +47,3 @@ form input[type=submit]{
 form select.option{
     width: 50%;
 }
-p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-span{
-    cursor: pointer;
-    color: brown;
-    margin: 5px;
-}
