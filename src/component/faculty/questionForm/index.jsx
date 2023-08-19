@@ -22,7 +22,12 @@ const QustionForm = ({addQuestion}) => {
             optionC : optionC,
             optionD : optionD
         })
-        navigate("/questionForm")
+        setQuestion('')
+        setOptionA('')
+        setOptionB('')
+        setOptionC('')
+        setOptionD('')
+       // navigate("/questionForm")
     }
 
   return (
@@ -60,7 +65,7 @@ const QustionForm = ({addQuestion}) => {
                     onChange = {(e) => setOptionD(e.target.value)} 
                 />
                 <select id="vehicleType" name="type" required>
-			        <option value disabled >--Select correct option--</option>
+			        <option value selected disabled >--Select correct option--</option>
 			        <option value="optionA">option A</option>
 			        <option value="optionB">option B</option>
 			        <option value="optionC">option C</option>
