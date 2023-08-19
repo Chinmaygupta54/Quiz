@@ -20,7 +20,7 @@ export const LoginForm = () => {
             placeholder = 'Password'
         />
         <select name = "" id="">
-            <option value disabled>Select Any</option>
+            <option value disabled selected>Select Any</option>
             <option value = "faculty">Faculty</option>
             <option value = "student">Student</option> 
         </select>
