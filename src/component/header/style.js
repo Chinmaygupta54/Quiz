@@ -6,9 +6,11 @@ const Wrapper = styled.nav`
     justify-content: space-between;
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
     ul{
         list-style: none;
         display: flex;
+        text-decoration: none;
         li{
             padding: 5px 20px;
             margin : 5px;
@@ -20,6 +22,7 @@ const Wrapper = styled.nav`
             border-radius: 5px;
             box-shadow: 2px 2px 5px gray;
             transition: 0.3s;
+            text-decoration: none;
 
         }
     }    

@@ -1,29 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 import "./style.css"
+import axios from 'axios'
 
-export const LoginForm = () => {
-  
+const LoginForm = () => {
+  const[contact, setContact] = useState("")
+  const[password, setPassword] = useState("")
   const navigate = useNavigate()
   const signIn = () => {
     navigate("/signin")
 }
+const LoginForm = (e) => {
+  e.preventDefault()
+  axios.post("https://server-api1-li2k.onrender.com/api/user/login", {
+    contact, password 
+  }).then(res => {console.log(res.data)}).catch(err => {console.log(err.message)}).finally(()=>{
+    console.log("LOgin Successful")
+  })
+ }
   return (
       <form action = "">
         <h2>Login</h2>
+        <div className='input-box'>
         <input
             type = "text" 
-            placeholder = 'Username'
+            placeholder='Contact'
+            required
+            value={contact}
+            onChange={(e) => setContact(e.target.value) }
         />
+        </div>
+        <div className='input-box'>
         <input
             type='password'
             placeholder = 'Password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
         />
-        <select name = "" id="">
-            <option value disabled selected>Select Any</option>
-            <option value = "faculty">Faculty</option>
-            <option value = "student">Student</option> 
-        </select>
+        </div>
         <input
             type = "submit"
             id = 'userSubmitButton'
