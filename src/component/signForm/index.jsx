@@ -38,7 +38,7 @@ const SignIn  = () => {
             onChange={(e) => setPassword(e.target.value)}
         />
          <select value={role}
-         onChange={(e) => setRole(e.target.value)}>
+            onChange={(e) => setRole(e.target.value)}>
             <option value disabled selected>Select Any</option>
             <option value = "faculty">Faculty</option>
             <option value = "student">Student</option> 
