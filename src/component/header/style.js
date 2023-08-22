@@ -23,7 +23,6 @@ const Wrapper = styled.nav`
             box-shadow: 2px 2px 5px gray;
             transition: 0.3s;
             text-decoration: none;
-
         }
     }    
 `

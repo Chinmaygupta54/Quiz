@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './style.css'
 import axios from 'axios'
 
-const SignIn  = () => {
+const SignIn = () => {
   const[userName,setUserName] = useState("")
   const [contact, setContact] = useState("")
   const [password, setPassword] = useState("")
@@ -19,10 +19,11 @@ const SignIn  = () => {
     <div>
       <form action="">
         <h2>Sign In</h2>
-        <input type="text"
-        placeholder='UserName'
-        value={userName}
-        onChange={(e) => setUserName(e.target.value)}
+        <input
+          type="text"
+          placeholder='UserName'
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
          />
         <input
             type = "text"

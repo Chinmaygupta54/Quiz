@@ -20,12 +20,12 @@ export const App = () => {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element = {<LoginForm />} />
-            <Route path="/login" element = {<LoginForm />} />
-            <Route path="/questionList" element = {<QuestionList questionList = {questionList} />} />
-            <Route path="/questionForm" element = {<QustionForm addQuestion = {addQuestion}/>} />
+            <Route path = "/" element = {<LoginForm />} />
+            <Route path = "/login" element = {<LoginForm />} />
+            <Route path = "/questionList" element = {<QuestionList questionList = {questionList} />} />
+            <Route path = "/questionForm" element = {<QustionForm addQuestion = {addQuestion}/>} />
             <Route path = "/attempt-quiz" element {...<Quiz />} />
-            <Route path="/signin" element = {<SignIn />} />
+            <Route path = "/signin" element = {<SignIn />} />
           </Routes>
           <Footer />
           
