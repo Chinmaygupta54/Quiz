@@ -7,6 +7,7 @@ const LoginForm = () => {
   const[contact, setContact] = useState("")
   const[password, setPassword] = useState("")
   const navigate = useNavigate()
+
   const signIn = () => {
     navigate("/signin")
 }
@@ -18,26 +19,26 @@ const LoginForm = (e) => {
     console.log("LOgin Successful")
   })
   alert("Welcome")
- }
+}
   return (
       <form action = "">
         <h2>Login</h2>
         <div className='input-box'>
-        <input
-            type = "text" 
-            placeholder='Contact'
-            required
-            value={contact}
-            onChange={(e) => setContact(e.target.value) }
-        />
+          <input
+              type = "text" 
+              placeholder='Contact'
+              required
+              value={contact}
+              onChange={(e) => setContact(e.target.value) }
+          />
         </div>
         <div className='input-box'>
-        <input
-            type='password'
-            placeholder = 'Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-        />
+          <input
+              type='password'
+              placeholder = 'Password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
         <input
             type = "submit"

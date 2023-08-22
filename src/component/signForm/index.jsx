@@ -3,7 +3,7 @@ import axios from 'axios'
 import './App.css';
 import { useNavigate } from 'react-router';
 
-const SignIn  = () => {
+const SignIn = () => {
   const[userName,setUserName] = useState("")
   const [contact, setContact] = useState("")
   const [password, setPassword] = useState("")
@@ -27,10 +27,11 @@ const SignIn  = () => {
     <div>
       <form action="">
         <h2>Sign In</h2>
-        <input type="text"
-        placeholder='UserName'
-        value={userName}
-        onChange={(e) => setUserName(e.target.value)}
+        <input
+          type="text"
+          placeholder='UserName'
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
          />
         <input
             type = "text"
@@ -46,7 +47,7 @@ const SignIn  = () => {
             onChange={(e) => setPassword(e.target.value)}
         />
          <select value={role}
-         onChange={(e) => setRole(e.target.value)}>
+            onChange={(e) => setRole(e.target.value)}>
             <option value disabled selected>Select Any</option>
             <option value = "faculty">Faculty</option>
             <option value = "student">Student</option> 

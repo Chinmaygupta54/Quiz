@@ -7,6 +7,7 @@ const Quiz = () => {
   const [selectedAnswer, setSelectedAnswer] = useState('')
   const [showResult, setShowResult] = useState(false)
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null)
+  
   const [result, setResult] = useState({
     score: 0,
     correctAnswers: 0,
