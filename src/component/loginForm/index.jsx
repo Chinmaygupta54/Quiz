@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
-import "./style.css"
+import "./App.css"
 import axios from 'axios'
 
 const LoginForm = () => {
@@ -10,16 +10,16 @@ const LoginForm = () => {
 
   const signIn = () => {
     navigate("/signin")
-  }
-
-  const LoginForm = (e) => {
-    e.preventDefault()
-    axios.post("https://server-api1-li2k.onrender.com/api/user/login", {
-      contact, password 
-    }).then(res => {console.log(res.data)}).catch(err => {console.log(err.message)}).finally(()=>{
-      console.log("LOgin Successful")
-    })
-  }
+}
+const LoginForm = (e) => {
+  e.preventDefault()
+  axios.post("https://server-api1-li2k.onrender.com/api/user/login", {
+    contact, password 
+  }).then(res => {console.log(res.data)}).catch(err => {console.log(err.message)}).finally(()=>{
+    console.log("LOgin Successful")
+  })
+  alert("Welcome")
+}
   return (
       <form action = "">
         <h2>Login</h2>
@@ -40,12 +40,12 @@ const LoginForm = () => {
               onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-          <input
-              type = "submit"
-              id = 'userSubmitButton'
-              value = "Login" 
-              onClick={LoginForm}
-          />
+        <input
+            type = "submit"
+            id = 'userSubmitButton'
+            onClick={LoginForm} 
+            
+        />
         <p>
           Are you a new user?<span onClick={signIn}>SignIn</span>
         </p>
