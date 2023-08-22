@@ -9,6 +9,7 @@ const QustionForm = ({addQuestion}) => {
     const [optionB, setOptionB] = useState("")
     const [optionC, setOptionC] = useState("")
     const [optionD, setOptionD] = useState("")
+    const [correctAnswer, setCorrectAnswer] = useState("")
 
     const navigate = useNavigate()
     const questionList = () => {
@@ -20,13 +21,15 @@ const QustionForm = ({addQuestion}) => {
             optionA : optionA,
             optionB : optionB,
             optionC : optionC,
-            optionD : optionD
+            optionD : optionD,
+            correctAnswer : correctAnswer
         })
         setQuestion('')
         setOptionA('')
         setOptionB('')
         setOptionC('')
         setOptionD('')
+        setCorrectAnswer('')
     }
 
   return (
@@ -63,7 +66,10 @@ const QustionForm = ({addQuestion}) => {
                     value = {optionD}
                     onChange = {(e) => setOptionD(e.target.value)} 
                 />
-                <select id = "vehicleType" name = "type" required>
+                <select name = "type"
+                    onChange = {(e) => setCorrectAnswer(e.target.value)}
+                    required
+                >
 			        <option value selected disabled >--Select correct option--</option>
 			        <option value = "optionA">option A</option>
 			        <option value = "optionB">option B</option>

@@ -20,6 +20,9 @@ const QuestionList = ({questionList}) => {
             <div>
                Option D = {quest.optionD}
             </div>
+            <div>
+               Correct Option = {quest.correctAnswer}
+            </div>
         </div>)
         }
     </div>
