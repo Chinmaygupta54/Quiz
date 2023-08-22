@@ -1,16 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 form{
     border: 2px;
-    width : 60%;
+    width : 50%;
     margin : 100px auto;
     border-radius: 5px;
     text-align: center;
     box-shadow: 2px 2px 3px grey;
-    padding: 35px 90px;
+    padding: 35px 40px;
     display: block;
     box-sizing: content-box;
     
@@ -34,8 +29,12 @@ form h2{
     
 
 }
+input#userSubmitButton {
+    width: 60%;
+    padding: 7px;
+}
 form input[type=submit]{
-    width: 40%;
+    width: 26%;
     margin: auto;
     border-radius: 2px;
     display: block;
@@ -48,8 +47,8 @@ form select.option{
     width: 50%;
 }
 p{
-    padding: 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 16px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 span{
     cursor: pointer;

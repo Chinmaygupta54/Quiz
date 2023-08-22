@@ -66,10 +66,10 @@ const QustionForm = ({addQuestion}) => {
                 />
                 <select id="vehicleType" name="type" required>
 			        <option value selected disabled >--Select correct option--</option>
-			        <option value="optionA">option A</option>
-			        <option value="optionB">option B</option>
-			        <option value="optionC">option C</option>
-                    <option value="optionD">option D</option>
+			        <option value="optionA">{optionA}</option>
+			        <option value="optionB">{optionB}</option>
+			        <option value="optionC">{optionC}</option>
+                    <option value="optionD">{optionD}</option>
 		        </select>
                 <input
                     type = "button"

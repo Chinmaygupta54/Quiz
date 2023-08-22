@@ -39,6 +39,7 @@ body {
   .quiz-container ul {
     margin-top: 20px;
     margin-left: -40px;
+    text-decoration: none;
   }
   
   .quiz-container ul li {
@@ -69,6 +70,7 @@ body {
     border: none;
     cursor: pointer;
     margin-top: 15px;
+    width: 26%;
   }
   
   .quiz-container button:disabled {

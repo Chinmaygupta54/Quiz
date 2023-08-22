@@ -1,16 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 form{
     border: 2px;
-    width : 50%;
+    width : 65%;
     margin : 100px auto;
     border-radius: 5px;
     text-align: center;
     box-shadow: 2px 2px 3px grey;
-    padding: 10px 50px;
+    padding: 35px 90px;
     display: block;
     box-sizing: content-box;
     
@@ -34,8 +29,12 @@ form h2{
     
 
 }
+input#userSubmitButton {
+    width: 60%;
+
+}
 form input[type=submit]{
-    width: 20%;
+    width: 26%;
     margin: auto;
     border-radius: 2px;
     display: block;
@@ -44,6 +43,20 @@ form input[type=submit]{
     background-color: lightpink ;
     color: white;
 }
+form input[type=submit]:hover{
+    transition: 0.3s;
+
+}
+
 form select.option{
     width: 50%;
+}
+p{
+    padding: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+span{
+    cursor: pointer;
+    color: brown;
+    /* margin: 2px; */
 }

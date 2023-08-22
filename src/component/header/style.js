@@ -16,6 +16,9 @@ const Wrapper = styled.nav`
             margin : 5px;
             text-decoration: none;
         }
+        a {
+            text-decoration: none;
+        }
         li:hover{
             background-color: rgb(166, 166, 247);
             color: black;

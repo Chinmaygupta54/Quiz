@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
-import "./style.css"
+import "./App.css"
 import axios from 'axios'
 
 const LoginForm = () => {
@@ -17,6 +17,7 @@ const LoginForm = (e) => {
   }).then(res => {console.log(res.data)}).catch(err => {console.log(err.message)}).finally(()=>{
     console.log("LOgin Successful")
   })
+  alert("Welcome")
  }
   return (
       <form action = "">
@@ -41,8 +42,8 @@ const LoginForm = (e) => {
         <input
             type = "submit"
             id = 'userSubmitButton'
-            value = "Login" 
-            onClick={LoginForm}
+            onClick={LoginForm} 
+            
         />
         <p>
           Are you a new user?<span onClick={signIn}>SignIn</span>
