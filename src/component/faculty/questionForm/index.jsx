@@ -94,12 +94,13 @@ const QustionForm = ({addQuestion}) => {
                     
                 />
             </form>
+            <div>
             <input
                     type = "button"
                     value = "View Questions"
                     onClick = {questionList}        
             />
-
+            </div>
     </Wrapper>
   )
 }

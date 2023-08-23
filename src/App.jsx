@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes} from "react-router-dom"
 import Footer from "./component/footer"
-import Header from "./component/header"
 import LoginForm from "./component/loginForm"
 import QustionForm from "./component/faculty/questionForm"
 import { useState } from "react"
@@ -10,6 +9,7 @@ import SignIn from "./component/signForm"
 import LoginHeader from "./component/header/loginHeader"
 import './style.css'
 import Error from "./component/error"
+import FacultyHeader from "./component/header/facultyHeader"
 
 export const App = () => {
 
@@ -21,7 +21,11 @@ export const App = () => {
 
     return(
         <BrowserRouter>
-          <Header />
+          <Routes>
+          <Route path = "/" element = {<LoginHeader />}/>
+          <Route path = "/questionForm" element = {<FacultyHeader />}/>
+          <Route path = "/questionList" element = {<FacultyHeader />}/>
+          </Routes>
           
           <Routes>
             <Route path = "/" element = {<LoginForm />}/>

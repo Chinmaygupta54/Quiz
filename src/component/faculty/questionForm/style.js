@@ -56,6 +56,10 @@ form input[type=button]{
     color: white;
     
 }
+div{
+    width: 100%;
+
+
 input[type=button]{
     width: 20%;
     display: block;
@@ -66,6 +70,7 @@ input[type=button]{
     border-radius: 5px;
     font-size: 1.1rem;
     color: white;
+}
 }
 `
 export default Wrapper
