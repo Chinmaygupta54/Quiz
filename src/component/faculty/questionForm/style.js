@@ -22,8 +22,14 @@ form{
     border: 2px;
     border-radius: 5px;
     box-shadow: 2px 2px 3px rgb(87, 86, 88);
+}
+input{
+    width: 49%;
+    padding: 10px;
+    margin: 5px 0px;
+    box-sizing: border-box;
 }    
-form input{
+form input, select{
     width: 100%;
     padding: 10px;
     margin: 5px 0px;
