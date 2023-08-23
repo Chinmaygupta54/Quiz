@@ -19,6 +19,7 @@ form{
     width: 100%;
     max-width: 500px;
     min-width:240px;
+    background-color: #DBD2E0;
     display: block;
     align-items: center;
     border: 2px;
@@ -31,22 +32,40 @@ input{
     margin: 5px 0px;
     box-sizing: border-box;
 }    
-form input, select{
-    width: 100%;
+form input{
+    width: 70%;
+    min-width: 200px;
     padding: 10px;
     margin: 5px 0px;
     box-sizing: border-box;
 }
+form select{
+    width: 60%;
+    padding: 10px;
+    margin: 5px 0px;
+}
 form input[type=button]{
-    width: 70%;
+    width: 40%;
     display: block;
+    min-width: fit-content;
     margin: 5px auto;
-    background-color: #C7B9FF;
+    background-color: #AA4465;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
-    color: rgb(59, 59, 59);
-    color : white;
+    color: white;
+    
+}
+input[type=button]{
+    width: 20%;
+    display: block;
+    min-width: fit-content;
+    margin: 5px auto;
+    background-color: #AA4465;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: white;
 }
 `
 export default Wrapper
