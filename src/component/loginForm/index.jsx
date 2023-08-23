@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
-import "./App.css"
+import Wrapper from './style'
 import axios from 'axios'
 
 const LoginForm = () => {
@@ -15,15 +15,21 @@ const LoginForm = (e) => {
   e.preventDefault()
   axios.post("https://server-api1-li2k.onrender.com/api/user/login", {
     contact, password 
-  }).then(res => {console.log(res.data)}).catch(err => {console.log(err.message)}).finally(()=>{
+  }).then(res => {console.log(res.data) 
+  if(res.data.role === "faculty"){
+    navigate("/questionForm")
+    alert("WELCOME FACULTY")
+  }
+  }).catch(err => {console.log(err.message)}).finally(()=>{
     console.log("LOgin Successful")
   })
-  alert("Welcome")
+  
 }
   return (
-      <form action = "">
+      <Wrapper>
+        <div className='loginContainer'>
+        <form>
         <h2>Login</h2>
-        <div className='input-box'>
           <input
               type = "text" 
               placeholder='Contact'
@@ -31,25 +37,24 @@ const LoginForm = (e) => {
               value={contact}
               onChange={(e) => setContact(e.target.value) }
           />
-        </div>
-        <div className='input-box'>
           <input
               type='password'
               placeholder = 'Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
           />
-        </div>
         <input
             type = "submit"
+            className='Button'
             id = 'userSubmitButton'
             onClick={LoginForm} 
-            
         />
         <p>
-          Are you a new user?<span onClick={signIn}>SignIn</span>
+          Are you a new user? <span onClick={signIn}>SignIn</span>
         </p>
-      </form>
+        </form>
+        </div>
+      </Wrapper>
    )
 }
 

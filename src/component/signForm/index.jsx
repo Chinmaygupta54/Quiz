@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import './App.css';
 import { useNavigate } from 'react-router';
-
+import Wrapper from './style';
 const SignIn = () => {
   const[userName,setUserName] = useState("")
   const [contact, setContact] = useState("")
@@ -24,8 +23,9 @@ const SignIn = () => {
   })
  }
   return (
-    <div>
-      <form action="">
+    <Wrapper>
+    <div className='signinContainer'>
+      <form>
         <h2>Sign In</h2>
         <input
           type="text"
@@ -46,9 +46,8 @@ const SignIn = () => {
             required
             onChange={(e) => setPassword(e.target.value)}
         />
-         <select value={role}
-            onChange={(e) => setRole(e.target.value)}>
-            <option value disabled selected>Select Any</option>
+         <select onChange={(e) => setRole(e.target.value)}>
+            <option value =" " disabled selected>Select Any</option>
             <option value = "faculty">Faculty</option>
             <option value = "student">Student</option> 
         </select>
@@ -58,6 +57,7 @@ const SignIn = () => {
         />
       </form>
     </div>
+    </Wrapper>
   )
 }
 
