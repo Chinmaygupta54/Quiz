@@ -6,7 +6,7 @@ const Header = () => {
   return (
    <header>
     <Wrapper>
-        <h1>Quiz App</h1>     
+        <h1><a href='/' >Quiz App</a></h1>     
         <nav>  
           <ul>
             {/* <li><Link to="/signin">Registration</Link></li> */}

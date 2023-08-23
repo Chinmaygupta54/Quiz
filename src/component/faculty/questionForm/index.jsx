@@ -36,7 +36,7 @@ const QustionForm = ({addQuestion}) => {
         setOptionB('')
         setOptionC('')
         setOptionD('')
-        setCorrectAnswer('')
+        setCorrectAnswer(0)
     }
 }
 
