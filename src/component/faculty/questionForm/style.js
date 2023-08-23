@@ -17,6 +17,8 @@ form{
     margin: 30px auto;
     padding: 10px;
     width: 100%;
+    max-width: 500px;
+    min-width:240px;
     display: block;
     align-items: center;
     border: 2px;
