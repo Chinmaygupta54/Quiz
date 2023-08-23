@@ -7,6 +7,10 @@ const Wrapper = styled.nav`
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
+    h1 a{
+        text-decoration: none;
+        color : black;
+    }
     ul{
         list-style: none;
         display: flex;

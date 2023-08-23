@@ -16,7 +16,7 @@ h1{
 form{
     margin: 30px auto;
     padding: 10px;
-    width: 500px;
+    width: 100%;
     display: block;
     align-items: center;
     border: 2px;

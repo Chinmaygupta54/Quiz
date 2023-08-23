@@ -27,6 +27,7 @@ const QustionForm = ({addQuestion}) => {
         setOptionB('')
         setOptionC('')
         setOptionD('')
+        setCorrectAnswer(0)
     }
 
   return (
