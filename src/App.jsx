@@ -7,6 +7,7 @@ import { useState } from "react"
 import QuestionList from "./component/faculty/qustionList"
 import Quiz from "./component/student/attemptquiz"
 import SignIn from "./component/signForm"
+import Error from "./component/error"
 
 export const App = () => {
 
@@ -26,6 +27,7 @@ export const App = () => {
             <Route path = "/questionForm" element = {<QustionForm addQuestion = {addQuestion}/>} />
             <Route path = "/attempt-quiz" element {...<Quiz />} />
             <Route path = "/signin" element = {<SignIn />} />
+            <Route path = "/*" element = {<Error />} />
           </Routes>
           <Footer />
           
