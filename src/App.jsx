@@ -23,6 +23,7 @@ export const App = () => {
         <BrowserRouter>
           <Routes>
           <Route path = "/" element = {<LoginHeader />}/>
+          <Route path = "/signin" element = {<LoginHeader />}/>
           <Route path = "/questionForm" element = {<FacultyHeader />}/>
           <Route path = "/questionList" element = {<FacultyHeader />}/>
           </Routes>
