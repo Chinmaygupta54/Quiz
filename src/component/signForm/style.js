@@ -19,11 +19,13 @@ justify-content: space-evenly;
         border-radius: 5px;
         text-align: center;
         box-shadow: 2px 2px 3px grey;
-        padding: 35px 90px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         box-sizing: content-box;
         background-color: #DBD2E0;
+        max-width: 500px;
+    min-width: 240px;
 }
         
      input{
@@ -41,6 +43,8 @@ justify-content: space-evenly;
     select {
         padding: 9px;
         border-radius: 5px;
+        margin: auto;
+    width: 70%;
     }
     .Button {
         width: 60%;
@@ -56,8 +60,11 @@ justify-content: space-evenly;
     background-color: #AA4465;
     }
     input[type="button"] {
+        width: 94px;
         background-color: #AA4465;
         color: white;
+        margin : 10px auto;
+        border-radius:5px;
     }
     }
 }
