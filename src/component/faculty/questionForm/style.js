@@ -38,6 +38,7 @@ form input[type=button]{
     border-radius: 5px;
     font-size: 1.1rem;
     color: rgb(59, 59, 59);
+    color : white;
 }
 `
 export default Wrapper
