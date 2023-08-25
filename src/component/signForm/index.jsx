@@ -11,7 +11,7 @@ const SignIn = () => {
   const[role, setRole] = useState("")
  const signIn = (e) => {
   e.preventDefault()
-  axios.post("https://server-api1-li2k.onrender.com/api/user/add", {
+  axios.post("https://quizattendace.onrender.com/api/user/add", {
     userName, contact, password ,role
   }).then(res => {
     console.log(res.data)

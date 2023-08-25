@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 import Wrapper from './style'
 import axios from 'axios'
+import Icon from 'react-icons-kit'
+
 
 const LoginForm = () => {
   const[contact, setContact] = useState("")
@@ -13,18 +15,30 @@ const LoginForm = () => {
 }
 const LoginForm = (e) => {
   e.preventDefault()
-  axios.post("https://server-api1-li2k.onrender.com/api/user/login", {
+  axios.post("https://quizattendace.onrender.com/api/user/login", {
     contact, password 
   }).then(res => {console.log(res.data) 
-  if(res.data.role === "faculty"){
-    navigate("/questionForm")
-    alert("WELCOME FACULTY")
+  if(res.data){
+    // alert('Welcome ${res.data.user.role}')
+    if (res.data.user.role === "faculty"){
+      alert("welcome faculty")
+      navigate("/questionForm")
+    }
+    else if(res.data.user.role ==="student"){
+      alert("welcome Student")
+      navigate("/Quiz")
+    }
+    // alert("WELCOME FACULTY")
   }
   }).catch(err => {console.log(err.message)}).finally(()=>{
-    console.log("LOgin Successful")
+    // console.log("LOgin Successful")
+    alert("Invalid user")
+   
   })
   
 }
+
+
   return (
       <Wrapper>
         <div className='loginContainer'>
@@ -32,17 +46,19 @@ const LoginForm = (e) => {
         <h2>Login</h2>
           <input
               type = "text" 
-              placeholder='Contact'
-              required
+              placeholder='Contact'   
               value={contact}
               onChange={(e) => setContact(e.target.value) }
           />
+          <div className='input-field'>
           <input
               type='password'
               placeholder = 'Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
           />
+          <span>Icon HERE</span>
+          </div>
         <input
             type = "submit"
             className='Button'

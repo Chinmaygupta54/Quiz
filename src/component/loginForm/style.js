@@ -50,6 +50,14 @@ justify-content: space-evenly;
         color: white;
     background-color: #AA4465;
     }
+    input-field{
+        width :330px;
+        height : 55px;
+        background-color: #fff;
+        border-radius: 24px;
+        display : flex;
+        
+    }
     p{
         padding: 5px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 
