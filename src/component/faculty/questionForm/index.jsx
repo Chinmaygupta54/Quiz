@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import Wrapper from './style'
+import axios from 'axios'
 
 const QustionForm = ({addQuestion}) => {
 
@@ -10,12 +11,25 @@ const QustionForm = ({addQuestion}) => {
     const [optionC, setOptionC] = useState("")
     const [optionD, setOptionD] = useState("")
     const [correctAnswer, setCorrectAnswer] = useState("")
+    const [quizes, setQuizes] = useState([])
+
+
+    useEffect(() => {
+        axios.get('https://quizattendace.onrender.com/api/quiz/read')
+        .then(res => {
+            setQuizes(res.data)
+            setQuiz(res.data[0])
+        })
+    },[])
+    const [quiz, setQuiz] = useState(quizes[0]);
 
     const navigate = useNavigate()
     const questionList = () => {
         navigate("/questionList")
     }
     const add = () => {
+        const newQuestion = new Question(question, [optionA, optionB, optionC, optionD], +correctAnswer, quiz.id);
+
         if(question.length ===0||optionA.length === 0||optionB.length === 0||optionC.length === 0||optionD.length === 0){
             alert("Please Enter question and their options")
         }
@@ -23,6 +37,13 @@ const QustionForm = ({addQuestion}) => {
             alert("Please select correct option")
         }
         else{
+            axios.post("https://quizattendace.onrender.com/api/ques/add", newQuestion)
+        .then(response => {
+            console.log(response)
+        }).catch(console.log)
+
+        console.log(quizes);
+
         addQuestion({
             question : question,
             optionA : optionA,
@@ -45,7 +66,7 @@ const QustionForm = ({addQuestion}) => {
             <form action = "">
               <h1>Add Questions</h1>
                 <input 
-                    type ='textarea'
+                    type ='text'
                     placeholder = "Enter Question"
                     value = {question}
                     onChange = {(e) => setQuestion(e.target.value)} 
@@ -87,6 +108,11 @@ const QustionForm = ({addQuestion}) => {
 			        <option value = "optionC">option C</option>
                     <option value = "optionD">option D</option>
 		        </select>
+                <select onChange={e => setQuiz(JSON.parse(e.target.value))}>
+                    {
+                        quizes.map(quiz => <option key={quiz.id} value={JSON.stringify(quiz)}>{quiz.title}</option>)
+                    }
+                </select>
                 <input
                     type = "button"
                     value = "Add Question"
