@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 import Wrapper from './style'
 import axios from 'axios'
-import Icon from 'react-icons-kit'
-
 
 const LoginForm = () => {
   const[contact, setContact] = useState("")
@@ -32,7 +30,7 @@ const LoginForm = (e) => {
   }
   }).catch(err => {console.log(err.message)}).finally(()=>{
     // console.log("LOgin Successful")
-    alert("Invalid user")
+    // alert("Invalid user")
    
   })
   
@@ -57,7 +55,6 @@ const LoginForm = (e) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
           />
-          <span>Icon HERE</span>
           </div>
         <input
             type = "submit"
@@ -66,7 +63,7 @@ const LoginForm = (e) => {
             onClick={LoginForm} 
         />
         <p>
-          Are you a new user? <span onClick={signIn}>SignIn</span>
+          Are you a new user? <span onClick={signIn}><div>SignIn</div></span>
         </p>
         </form>
         </div>

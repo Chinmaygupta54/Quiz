@@ -6,17 +6,20 @@ const FacultyHeader = () => {
   return (
    <header>
     <Wrapper>
-        <h1><a href='/' >Quiz App</a></h1>     
+        <h1><a href='/' >Quiz World</a></h1>     
         <nav>  
           <ul>
             {/* <li><Link to="/signin">Registration</Link></li> */}
             {/* <li><Link to="login">Login</Link></li> */}
              {/* <li><Link to="/attempt-quiz">Take Quiz</Link></li>  */}
-             <li><Link to="/questionList">Question List</ Link></li> 
+             {/* <li><Link to="/questionList">Question List</ Link></li>  */}
              <li><Link to="/questionForm">Question Form</Link></li> 
-             <li><Link to="result">Result</Link></li> 
+             <li><Link to="result">Result</Link></li>
+             <li><Link to="/login">Logout</Link></li> 
         </ul>
+       
         </nav>
+      
     </Wrapper>
    </header>
   )
