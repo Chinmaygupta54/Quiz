@@ -31,6 +31,21 @@ justify-content: space-evenly;
         padding: 10px;
         box-sizing: border-box;
         margin: 10px auto;
+        input-field span{
+            width :330px;
+            height : 55px;
+            background-color: #fff;
+            border-radius: 24px;
+            display : flex;
+            
+        }
+        input-field input{
+            width: 100%;
+            height : 100%:
+            background-color : transparent;
+            outline : none;
+            border :hidden;
+        }
     }
      h2{
         color: black;
@@ -41,7 +56,7 @@ justify-content: space-evenly;
         width: 60%;
     }
      .Button{
-        width: 50%;
+        width: 70%;
         margin: auto;
         border-radius: 2px;
         display: block;
@@ -55,10 +70,11 @@ justify-content: space-evenly;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 
         'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-    span{
+   span{
         cursor: pointer;
         color: brown;
          margin: 2px; 
+         font-weight: bold;
     }
     }
 }
