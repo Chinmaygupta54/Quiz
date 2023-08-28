@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import Wrapper from './style'
 import axios from 'axios'
+//import { Question } from '../../question'
 
 const QustionForm = ({addQuestion}) => {
 
@@ -22,14 +23,12 @@ const QustionForm = ({addQuestion}) => {
         })
     },[])
     const [quiz, setQuiz] = useState(quizes[0]);
-
     const navigate = useNavigate()
     const questionList = () => {
         navigate("/questionList")
     }
     const add = () => {
-        const newQuestion = new Question(question, [optionA, optionB, optionC, optionD], +correctAnswer, quiz.id);
-
+    
         if(question.length ===0||optionA.length === 0||optionB.length === 0||optionC.length === 0||optionD.length === 0){
             alert("Please Enter question and their options")
         }
@@ -37,12 +36,21 @@ const QustionForm = ({addQuestion}) => {
             alert("Please select correct option")
         }
         else{
-            axios.post("https://quizattendace.onrender.com/api/ques/add", newQuestion)
-        .then(response => {
-            console.log(response)
-        }).catch(console.log)
+            const options =[optionA,optionB,optionC,optionD];
+            const correctAnsIndex= options.indexOf(correctAnswer);
+            axios.post("https://quizattendace.onrender.com/api/ques/add", {
+                // title: quizId,
+                ques: question,
+                ans: options,
+                correctAnsIndex: correctAnsIndex,
+        })
+        .then((res) => {
+            console.log(res.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 
-        console.log(quizes);
 
         addQuestion({
             question : question,
@@ -103,10 +111,10 @@ const QustionForm = ({addQuestion}) => {
                     onChange = {(e) => setCorrectAnswer(e.target.value)}                    
                 >
 			        <option value selected disabled >--Select correct option--</option>
-			        <option value = "optionA">{optionA}</option>
-			        <option value = "optionB">{optionB}</option>
-			        <option value = "optionC">{optionC}</option>
-                    <option value = "optionD">{optionD}</option>
+			        <option value = "optionA">option A</option>
+			        <option value = "optionB">option B</option>
+			        <option value = "optionC">option C</option>
+                    <option value = "optionD">option D</option>
 		        </select>
                 <select onChange={e => setQuiz(JSON.parse(e.target.value))}>
                     {

@@ -14,7 +14,7 @@ const FacultyHeader = () => {
              {/* <li><Link to="/attempt-quiz">Take Quiz</Link></li>  */}
              {/* <li><Link to="/questionList">Question List</ Link></li>  */}
              <li><Link to="/questionForm">Question Form</Link></li> 
-             <li><Link to="result">Result</Link></li>
+             {/* <li><Link to="result">Result</Link></li> */}
              <li><Link to="/login">Logout</Link></li> 
         </ul>
        

@@ -24,7 +24,7 @@ const LoginForm = (e) => {
     }
     else if(res.data.user.role ==="student"){
       alert("welcome Student")
-      navigate("/Quiz")
+      navigate("/attemptquiz")
     }
     // alert("WELCOME FACULTY")
   }
