@@ -6,7 +6,7 @@ const FacultyHeader = () => {
   return (
    <header>
     <Wrapper>
-        <h1><a href='/' >Quiz App</a></h1>     
+        <h1><a href='/' >Quiz World</a></h1>     
         <nav>  
           <ul>
             {/* <li><Link to="/signin">Registration</Link></li> */}
