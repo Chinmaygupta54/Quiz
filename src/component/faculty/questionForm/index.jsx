@@ -10,6 +10,16 @@ const QustionForm = ({addQuestion}) => {
     const [optionC, setOptionC] = useState("")
     const [optionD, setOptionD] = useState("")
     const [correctAnswer, setCorrectAnswer] = useState("")
+    // const [Quiz , sz] = useState("")
+
+    // useEffect(() => {
+    //     axios.get("https://quizattendace.onrender.com/api/quiz/read`")
+    //     .then(res =>
+    //         {
+    //             setQuiz(res.data[0])
+    //         })
+    // })
+   
 
     const navigate = useNavigate()
     const questionList = () => {
@@ -82,11 +92,19 @@ const QustionForm = ({addQuestion}) => {
                     onChange = {(e) => setCorrectAnswer(e.target.value)}                    
                 >
 			        <option value selected disabled >--Select correct option--</option>
-			        <option value = "optionA">option A</option>
-			        <option value = "optionB">option B</option>
-			        <option value = "optionC">option C</option>
-                    <option value = "optionD">option D</option>
+			        <option value = "optionA">{optionA}</option>
+			        <option value = "optionB">{optionB}</option>
+			        <option value = "optionC">{optionC}</option>
+                    <option value = "optionD">{optionD}</option>
 		        </select>
+                <select >
+                    <option value="" disabled selected> ---Type of Quiz---</option>
+                    <option value = "Html">Html</option>
+                    <option value = "Java">Java</option>
+                    <option value = "Css">Css</option>
+                    <option value = "ReactJs">ReactJs</option>
+                    
+                </select>
                 <input
                     type = "button"
                     value = "Add Question"
