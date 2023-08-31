@@ -3,7 +3,7 @@ import Wrapper from '../questionForm/style'
 import { useNavigate } from 'react-router'
 import axios from 'axios'
 
-const Create = () => {
+const CreateQuiz = () => {
     const[title, setTitle] = useState("")
     const[description ,setDescription] = useState("")
     const navigate = useNavigate()
@@ -48,6 +48,7 @@ const Create = () => {
             type = "button"
             className='Button'
             id = 'Add Question'
+            value="Create"
             onClick={addQuiz} 
         />
         </form>
@@ -59,4 +60,4 @@ const Create = () => {
   )
 }
 
-export default Create
+export default CreateQuiz
