@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import Wrapper from './style'
 import axios from 'axios'
-//import { Question } from '../../question'
 
 const QustionForm = ({addQuestion}) => {
 
@@ -29,15 +28,15 @@ const QustionForm = ({addQuestion}) => {
     }
     const add = () => {
     
-        if(question.length ===0||optionA.length === 0||optionB.length === 0||optionC.length === 0||optionD.length === 0){
+        if(question.length === 0||optionA.length === 0||optionB.length === 0||optionC.length === 0||optionD.length === 0){
             alert("Please Enter question and their options")
         }
         else if(correctAnswer.length === 0){
             alert("Please select correct option")
         }
         else{
-            const options =[optionA,optionB,optionC,optionD];
-            const correctAnsIndex= options.indexOf(correctAnswer);
+            const options = [optionA,optionB,optionC,optionD];
+            const correctAnsIndex = options.indexOf(correctAnswer);
             axios.post("https://quizattendace.onrender.com/api/ques/add", {
                 ques: question,
                 ans: options,
@@ -90,22 +89,19 @@ const QustionForm = ({addQuestion}) => {
                     type = "text"
                     placeholder = "option B"
                     value = {optionB}
-                    onChange = {(e) => setOptionB(e.target.value)} 
-                    
+                    onChange = {(e) => setOptionB(e.target.value)}
                 />
                 <input
                     type = "text"
                     placeholder = "option C"
                     value = {optionC}
-                    onChange = {(e) => setOptionC(e.target.value)} 
-                    
+                    onChange = {(e) => setOptionC(e.target.value)}                    
                 />
                 <input
                     type = "text"
                     placeholder = "option D"
                     value = {optionD}
-                    onChange = {(e) => setOptionD(e.target.value)} 
-                    
+                    onChange = {(e) => setOptionD(e.target.value)}                     
                 />
                 <select name = "type"
                     onChange = {(e) => setCorrectAnswer(e.target.value)}                    
@@ -124,8 +120,7 @@ const QustionForm = ({addQuestion}) => {
                 <input
                     type = "button"
                     value = "Add Question"
-                    onClick = {add} 
-                    
+                    onClick = {add}                     
                 />
             </form>
             <div>

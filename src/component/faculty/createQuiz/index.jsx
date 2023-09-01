@@ -1,30 +1,26 @@
 import React, { useState } from 'react'
-import Wrapper from '../questionForm/style'
+import Wrapper from './style'
 import { useNavigate } from 'react-router'
 import axios from 'axios'
-
-const CreateQuiz = () => {
+const Create = () => {
     const[title, setTitle] = useState("")
-    const[description ,setDescription] = useState("")
     const navigate = useNavigate()
 
     const addQuiz = (e) =>{
-      if(title && description && title == " "){
+      if(title){
         e.preventDefault()
         axios.post("https://quizattendace.onrender.com/api/quiz/add" ,{
-    title , description
+    title 
   }).then(res => {
     console.log(res.data)
     navigate("/questionForm")
-
   }).catch(err => {console.log(err.message)}).finally(()=>{
     console.log("finally is working")
-
   })
   navigate("/questionForm")
-   }else{
-    alert("Please enter Quiz name ")
-   }
+      }else{
+        alert("Please enter Quiz name")
+      }
         
 
     }
@@ -39,15 +35,8 @@ const CreateQuiz = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value) }
           />
-          <input
-              type='text'
-              placeholder = 'Description'
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-          />
-        
         <input
-            type = "button"
+            type = "submit"
             className='Button'
             id = 'Add Question'
             value="Create"
@@ -55,11 +44,7 @@ const CreateQuiz = () => {
         />
         </form>
         </div>
-
-
-
     </Wrapper>
   )
 }
-
-export default CreateQuiz
+export default Create

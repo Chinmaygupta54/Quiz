@@ -6,6 +6,7 @@ const SignIn = () => {
   const[userName,setUserName] = useState("")
   const [contact, setContact] = useState("")
   const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate()
   
   const[role, setRole] = useState("")
@@ -17,16 +18,16 @@ const SignIn = () => {
     console.log(res.data)
     alert("Account is created")
     navigate("/login")
-  }).catch(err => {console.log(err.message)}).finally(()=>{
+  }).catch(err => {console.log(err.message)
+  }).finally(()=>{
     console.log("finally is working")
-
   })
  }
   return (
     <Wrapper>
     <div className='signinContainer'>
       <form>
-        <h2>Sign In</h2>
+        <h2>Sign Up</h2>
         <input
           type="text"
           placeholder='UserName'
@@ -46,6 +47,12 @@ const SignIn = () => {
             required
             onChange={(e) => setPassword(e.target.value)}
         />
+        <input
+              type='password'
+              placeholder = 'Confirm Password'
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+          />
          <select onChange={(e) => setRole(e.target.value)}>
             <option value =" " disabled selected>Select Any</option>
             <option value = "faculty">Faculty</option>
@@ -53,7 +60,7 @@ const SignIn = () => {
         </select>
         <input
             type="button" onClick={signIn} 
-            value="SignIn"
+            value="SignUp"
         />
       </form>
     </div>
