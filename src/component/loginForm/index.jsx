@@ -17,26 +17,19 @@ const LoginForm = (e) => {
     contact, password 
   }).then(res => {console.log(res.data) 
   if(res.data){
-    // alert('Welcome ${res.data.user.role}')
     if (res.data.user.role === "faculty"){
-      alert("welcome faculty")
-      navigate("/questionForm")
+      alert("Welcome faculty")
+      navigate("/Create")
     }
     else if(res.data.user.role ==="student"){
       alert("welcome Student")
       navigate("/attemptquiz")
     }
-    // alert("WELCOME FACULTY")
+
   }
   }).catch(err => {console.log(err.message)}).finally(()=>{
-    // console.log("LOgin Successful")
-    // alert("Invalid user")
-   
   })
-  
 }
-
-
   return (
       <Wrapper>
         <div className='loginContainer'>
@@ -48,14 +41,13 @@ const LoginForm = (e) => {
               value={contact}
               onChange={(e) => setContact(e.target.value) }
           />
-          <div className='input-field'>
           <input
               type='password'
               placeholder = 'Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
           />
-          </div>
+          
         <input
             type = "submit"
             className='Button'
@@ -63,7 +55,7 @@ const LoginForm = (e) => {
             onClick={LoginForm} 
         />
         <p>
-          Are you a new user? <span onClick={signIn}><div>SignIn</div></span>
+          Are you a new user? <span onClick={signIn}><div>SignUp</div></span>
         </p>
         </form>
         </div>

@@ -26,6 +26,7 @@ export const App = () => {
           <Route path = "/" element = {<LoginHeader />}/>
           <Route path = "/login" element = {<LoginHeader />}/>
           <Route path = "/signin" element = {<LoginHeader />}/>
+          <Route path = "/Create" element = {<LoginHeader />}/>
           <Route path = "/questionForm" element = {<FacultyHeader />}/>
           <Route path = "/questionList" element = {<FacultyHeader />}/>
           </Routes>
