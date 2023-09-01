@@ -39,33 +39,33 @@ const QustionForm = ({addQuestion}) => {
             const options =[optionA,optionB,optionC,optionD];
             const correctAnsIndex= options.indexOf(correctAnswer);
             axios.post("https://quizattendace.onrender.com/api/ques/add", {
-                // title: quizId,
                 ques: question,
                 ans: options,
                 correctAnsIndex: correctAnsIndex,
         })
         .then((res) => {
             console.log(res.data);
+            addQuestion({
+                question : question,
+                optionA : optionA,
+                optionB : optionB,
+                optionC : optionC,
+                optionD : optionD,
+                correctAnswer : correctAnswer
+            })
+            setQuestion('')
+            setOptionA('')
+            setOptionB('')
+            setOptionC('')
+            setOptionD('')
+            setCorrectAnswer('')
         })
         .catch((error) => {
             console.log(error);
         });
 
 
-        addQuestion({
-            question : question,
-            optionA : optionA,
-            optionB : optionB,
-            optionC : optionC,
-            optionD : optionD,
-            correctAnswer : correctAnswer
-        })
-        setQuestion('')
-        setOptionA('')
-        setOptionB('')
-        setOptionC('')
-        setOptionD('')
-        setCorrectAnswer('')
+        
     }
 }
 

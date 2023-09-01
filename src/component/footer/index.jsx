@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     //footer tag
     <Wrapper>
-        &copy;Quiz App 2023
+        &copy;Quiz World 2023
     </Wrapper>
   )
 }

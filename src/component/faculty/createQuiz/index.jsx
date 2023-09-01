@@ -9,7 +9,7 @@ const CreateQuiz = () => {
     const navigate = useNavigate()
 
     const addQuiz = (e) =>{
-      if(title && description){
+      if(title && description && title == " "){
         e.preventDefault()
         axios.post("https://quizattendace.onrender.com/api/quiz/add" ,{
     title , description
@@ -21,9 +21,11 @@ const CreateQuiz = () => {
     console.log("finally is working")
 
   })
-
-      }
-        navigate("/questionForm")
+  navigate("/questionForm")
+   }else{
+    alert("Please enter Quiz name ")
+   }
+        
 
     }
   return (
