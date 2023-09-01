@@ -11,6 +11,7 @@ import './style.css'
 import Error from "./component/error"
 import FacultyHeader from "./component/header/facultyHeader"
 import CreateQuiz from "./component/faculty/createQuiz"
+import Create from "./component/faculty/createQuiz"
 
 export const App = () => {
 
@@ -34,7 +35,7 @@ export const App = () => {
           <Routes>
             <Route path = "/" element = {<LoginForm />}/>
             <Route path = "/login" element = {<LoginForm />} />
-            <Route path = "/createQuiz" element = {<CreateQuiz />} />
+            <Route path = "/create" element = {<Create />} />
             <Route path = "/questionList" element = {<QuestionList questionList = {questionList} />} />
             <Route path = "/questionForm" element = {<QustionForm addQuestion = {addQuestion}/>} />
             <Route path = "/attemptquiz" element ={<Quiz />} />
