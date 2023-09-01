@@ -39,6 +39,7 @@ const Create = () => {
             type = "submit"
             className='Button'
             id = 'Add Question'
+            value="Create"
             onClick={addQuiz} 
         />
         </form>
